@@ -1,0 +1,17 @@
+# sshd_config
+# Dilpesh Patel 2019-10-17
+
+PermitRootLogin prohibit-password
+MaxAuthTries 3
+
+PubkeyAuthentication yes
+PasswordAuthentication no
+PermitEmptyPasswords no
+ChallengeResponseAuthentication no
+UsePAM no
+X11Forwarding yes
+PrintMotd no
+ClientAliveInterval 300
+ClientAliveCountMax 3
+AcceptEnv LANG LC_*
+Subsystem	sftp	/usr/lib/openssh/sftp-server
